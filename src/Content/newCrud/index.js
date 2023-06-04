@@ -20,23 +20,23 @@ const HomePage = () => {
     localStorage.setItem('products', JSON.stringify(products));
   }, [products]);
 
-  const handleAddProduct = (newProduct: any) => {
+  const handleAddProduct = (newProduct) => {
     setProducts((prevProducts) => [...prevProducts, newProduct]);
   };
 
-  const handleDeleteProduct = (productId: any) => {
+  const handleDeleteProduct = (productId) => {
     setProducts((prevProducts) =>
       prevProducts.filter((product) => product.id !== productId)
     );
   };
 
-  const handleEditProduct = (productId: any) => {
+  const handleEditProduct = (productId) => {
     const productToEdit = products.find((product) => product.id === productId);
     setSelectedProduct(productToEdit);
   };
 
-  const handleUpdateProduct = (updatedProduct: { id: any }) => {
-    setProducts((prevProducts) => {
+  const handleUpdateProduct = (updatedProduct) => {
+    setProducts((prevProduct) => {
       const updatedProducts = prevProducts.map((product) => {
         if (product.id === updatedProduct.id) {
           return updatedProduct;

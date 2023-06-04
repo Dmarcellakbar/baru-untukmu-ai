@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react';
 
 const Profile = dynamic(() => import('../Content/Profile/Profile'));
 const Hero = dynamic(() => import('../Content/Hero/Hero'));
-const CRUDVAR = dynamic(() => import('../Content/newCrud'));
+const CRUDVAR = dynamic(() => import('../Content/newCrud/index'));
 
 function IndexPage({ variants }: any) {
   const [myVariants, setMyVariants] = useState(variants);
