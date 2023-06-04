@@ -36,7 +36,7 @@ const HomePage = () => {
   };
 
   const handleUpdateProduct = (updatedProduct) => {
-    setProducts((prevProduct) => {
+    setProducts((prevProducts) => {
       const updatedProducts = prevProducts.map((product) => {
         if (product.id === updatedProduct.id) {
           return updatedProduct;
